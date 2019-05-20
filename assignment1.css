@@ -1,35 +1,38 @@
 .header {
-  background: #f2f2f2;
-  font-family: arial;
   background-color: white;
+  font-family: arial;
   padding: 30px 40px;
   color: #323fef;
   text-align: center;
   font-size:75%;
 }
 
-.addBtn {
-  padding: 7px;
+.button {
+  padding: 9px;
   width: 25%;
-  background: #d2d2d2;
+  background: linear-gradient(#d3d3d3, #f3f3f3);
   color: #323fef;
   float: center;
   text-align: center;
-  height:40px; 
   font-size: 12px;
+  font-weight:bold;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
   font-family: arial;
+  vertical-align: middle;
+  box-shadow: 2px 2px #c8c8c8;
 }
 
-.addBtn:hover {
-  background-color: purple;
+.button:hover {
+  background: #323fef;
   color: white;
+  font-weight:bold;
 }
 
 input {
-  background: #f0f0f0;
+  background: #f7f7f7;
+  box-shadow: 2px 2px 0.5px 0.5px #c8c8c8;
   font: arial;
   margin: 0;
   border: none;
@@ -38,10 +41,25 @@ input {
   padding: 7px;
   float: center;
   font-size: 16px;
+  vertical-align: middle;
+  margin-right:10px;
 }
 
 input:focus {
   outline-style: solid;
   outline-color: #323fef;
   outline-width: 1px;
+}
+
+ul li {
+  font-family:arial;
+  cursor: pointer;
+  position: center;
+  list-style:none;
+  padding: 10px 10px 10px 10px;
+  margin-right:25px;
+  background: #dbeaf8;
+  color:#3e3e3e;
+  font-size: 13px;
+  transition: 0.2s;
 }
