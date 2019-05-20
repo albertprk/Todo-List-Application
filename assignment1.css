@@ -1,3 +1,47 @@
-#title {
-  color:red;
-} 
+.header {
+  background: #f2f2f2;
+  font-family: arial;
+  background-color: white;
+  padding: 30px 40px;
+  color: #323fef;
+  text-align: center;
+  font-size:75%;
+}
+
+.addBtn {
+  padding: 7px;
+  width: 25%;
+  background: #d2d2d2;
+  color: #323fef;
+  float: center;
+  text-align: center;
+  height:40px; 
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  font-family: arial;
+}
+
+.addBtn:hover {
+  background-color: purple;
+  color: white;
+}
+
+input {
+  background: #f0f0f0;
+  font: arial;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 300px;
+  padding: 7px;
+  float: center;
+  font-size: 16px;
+}
+
+input:focus {
+  outline-style: solid;
+  outline-color: #323fef;
+  outline-width: 1px;
+}
