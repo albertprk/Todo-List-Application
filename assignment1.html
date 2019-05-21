@@ -15,19 +15,16 @@
   <div id="header" class="header">
     <input type="text" id="todo" placeholder="Type something"></input>
 
-    <span onclick="newTask" class="button">Add</span> <span onclick="clearForm()" class="button">Clear</span>
+  <span onclick="addTodo()" class="button">Add</span>
+  <span onclick="clearForm()" class="button">Clear</span>
   </div>
 
-    <ul id="taskList">
-      <li>Complete this assignment</li>
-      <li>Complete another assignment</li>
-    </ul>
-
-    <ul id="dataList"></ul>
-    <div id="taskList">
-      <div class="row1">
-        <div class="title"></div>
-    </div>
+  <ul id="todolist">
+    <li>Finish assignment</li>
+    <li class="checked">Go to gym</li>
+  </ul>
+  <br><br>
+  <span onclick="deleteAll()" class="button">Clear All</span>
 
 </center>
 </body>

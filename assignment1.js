@@ -2,15 +2,19 @@ function clearForm() {
   todo.value = "";
 }
 
-var data = '[{"Todo":"Finish Assignment"}, {"Todo":"Finish other assignment"}]'
+function addTodo() {
+  var currentList = document.createElement("li");
+  var input = document.getElementById("todo").value;
+  var newTodo = document.createTextNode(input);
+  currentList.appendChild(newTodo);
+  if (input === '') {
+    alert("Entry cannot be empty");
+  } else {
+    document.getElementById("todolist").appendChild(currentList);
+  }
+  document.getElementById("todo").value = "";
+}
 
-var dataObject = JSON.parse(data);
-var listItemString = $('#listItem').html();
-
-data.forEach(createList);
-
-function createList(item, index) {
-  var listItem = $('<li>' + listItemString + '</li>');
-  var listItemTitle = $('.todo', listItem);
-  listItemTitle.html(item.FeeType);
-  $('#dataList').append(listItem);
+function deleteAll() {
+  document.getElementById("todolist").innerHTML = "";
+}
