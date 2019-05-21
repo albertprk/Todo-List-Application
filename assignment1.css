@@ -30,7 +30,7 @@
   background: #323fef;
   color: white;
   font-weight:bold;
-  border:none;
+  border:1px solid #323fef;
 }
 
 
@@ -50,7 +50,15 @@
   margin-bottom:10px;
   margin-top:25px;
   display:inline-block;
+  cursor:pointer;
   /* box-shadow: 2px 2px #c8c8c8; */
+}
+
+.navbar:hover {
+  background: #323fef;
+  color: white;
+  font-weight:bold;
+  border:1px solid #323fef;
 }
 
 input {
