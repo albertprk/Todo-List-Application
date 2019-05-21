@@ -76,7 +76,7 @@ input {
   margin-right:10px;
 }
 
-input {
+input:focus {
   background-color:white;
   outline-style: solid;
   outline-color: #323fef;
