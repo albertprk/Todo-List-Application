@@ -95,4 +95,21 @@ ul li {
   font-size: 13px;
   transition: 0.2s;
   margin-bottom:5px;
+  width:50%;
+}
+
+.about {
+  font-family:arial;
+  cursor: pointer;
+  position: center;
+  list-style:none;
+  padding: 25px 25px 25px 25px;
+  margin-right:25px;
+  background: #dbeaf8;
+  color:#3e3e3e;
+  font-size: 13px;
+  transition: 0.2s;
+  margin-top:45px;
+  margin-bottom:5px;
+  width:70%;
 }
