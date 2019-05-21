@@ -4,12 +4,13 @@
   padding: 30px 40px;
   color: #323fef;
   text-align: center;
-  font-size:75%;
+  font-size:65%;
 }
 
 .button {
   padding: 9px;
-  width: 25%;
+  border: 1px solid #c8c8c8;
+  width: 50px;
   background: linear-gradient(#d3d3d3, #f3f3f3);
   color: #323fef;
   float: center;
@@ -21,21 +22,43 @@
   border-radius: 0;
   font-family: arial;
   vertical-align: middle;
-  box-shadow: 2px 2px #c8c8c8;
+  display:inline-block;
+  /* box-shadow: 2px 2px #c8c8c8; */
 }
 
 .button:hover {
   background: #323fef;
   color: white;
   font-weight:bold;
+  border:none;
+}
+
+
+.navbar {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 1px solid #c8c8c8;
+  width: 100px;
+  color: #323fef;
+  float: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight:bold;
+  border-radius: 0;
+  font-family: arial;
+  vertical-align: middle;
+  margin-bottom:10px;
+  margin-top:25px;
+  display:inline-block;
+  /* box-shadow: 2px 2px #c8c8c8; */
 }
 
 input {
   background: #f7f7f7;
-  box-shadow: 2px 2px 0.5px 0.5px #c8c8c8;
+  /*box-shadow: 2px 2px 0.5px 0.5px #c8c8c8;*/
   font: arial;
   margin: 0;
-  border: none;
+  border: 1px solid #c8c8c8;
   border-radius: 0;
   width: 300px;
   padding: 7px;
@@ -46,6 +69,7 @@ input {
 }
 
 input:focus {
+  background-color:white;
   outline-style: solid;
   outline-color: #323fef;
   outline-width: 1px;
@@ -62,4 +86,5 @@ ul li {
   color:#3e3e3e;
   font-size: 13px;
   transition: 0.2s;
+  margin-bottom:5px;
 }

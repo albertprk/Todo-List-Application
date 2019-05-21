@@ -3,18 +3,24 @@
 
 <head>
   <link rel="stylesheet" href="assignment1.css">
+  <script src="assignment1.js"></script>
 </head>
 
 <body>
 <center>
-  <div id="header" class="header">
-          <h2>Things I need to do:</h2>
-    <input type="text" id="input" placeholder="">
-    <span onclick="newTask" class="button">Add</span>
-      </div>
+  <div id ="navbar" class="navbar"> HOME </div> <div id ="navbar" class="navbar">ABOUT</div>
 
+  <div id="header" class="header">
+
+    <input type="text" id="input" placeholder="Type something">
+
+    <span onclick="newTask" class="button">Add</span>
+    <span onclick="clearForm" class="button">Clear</span></span>
+      </div>
+      </div> 
     <ul id="taskList">
       <li>Complete this assignment</li>
+      <li>Complete another assignment</li>
     </ul>
 </center>
 </body>
