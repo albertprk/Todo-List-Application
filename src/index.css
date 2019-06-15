@@ -1,0 +1,188 @@
+@keyframes panning {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 70% 70%;
+  }
+   50% {
+    background-position: 70% 0%;
+  }
+  75% {
+    background-position: 0 70%;
+  }
+  200% {
+    background-position: 0 0;
+  }
+}
+
+html {
+  background: url(https://i.imgur.com/31iNVcR.jpg) no-repeat center center fixed;
+  background-size: cover;
+  animation: panning 140s infinite linear;
+}
+
+
+.body {
+  margin-top:250px;
+  margin-left:10%;
+}
+
+.siteheader {
+  font-family: arial;
+  font-size: 300%;
+  color: #323fef;
+  margin-top: 135px;
+  font-weight: bold;
+}
+
+.subheadertext {
+  font-family: arial;
+  font-size: 80%;
+  color: #7c7c7c;
+  margin-top: -25px;
+}
+
+.navbutton {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background: #323fef;
+  border: 1px solid #323fef;
+  color: white;
+  width: 100px;
+  float: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0;
+  font-family: arial;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 2px;
+  /* box-shadow: 2px 2px #c8c8c8; */
+}
+
+.navbutton:hover {
+  background: #5964f8;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #5964f8;
+}
+
+.sitebody {
+  background-color: white;
+  font-family: arial;
+  padding: 30px 40px;
+  color: #323fef;
+  text-align: center;
+  font-size: 65%;
+}
+
+input {
+  background:rgba(255,255,255,0.3);
+  font: arial;
+  margin: 0;
+  border: 0;
+  width: 50%;
+  height:26px;
+  padding: 7px;
+  float: center;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+input:focus {
+  background:rgba(255,255,255,0.4);
+  outline-style: none;
+}
+
+.button {
+  font-family: arial;
+  background: rgba(50,63,239,0.45);
+  border: 0;
+  color: white;
+  padding: 9px;
+  margin-right: 2px;
+  width: 50px;
+  height:40px;
+  font-size: 12px;
+  float: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.button:hover {
+  background: rgba(50,63,239,0.55);
+  border: 0;
+}
+
+.todoEntry {
+  font-family: "Helvetica", arial;
+  cursor: pointer;
+  position: center;
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  background:rgba(255,255,255,0.3);
+  color: #5a5a5a;
+  font-size: 15px;
+  transition: 0.2s;
+  margin-bottom: 10px;
+  width: 58%;
+
+}
+
+.tasklist {
+  font-family: arial;
+  font-size: 100%;
+  color: #7c7c7c;
+  margin-top: 25px;
+}
+
+.clearbutton {
+  font-family: arial;
+  background: #323fef;
+  border: 1px solid #323fef;
+  color: white;
+  padding: 9px;
+  margin-right: 2px;
+  width: 100px;
+  font-size: 12px;
+  float: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.clearbutton:hover {
+  background: #5964f8;
+  border: 1px solid #5964f8;
+}
+
+.about {
+  font-family: arial;
+  cursor: pointer;
+  position: center;
+  list-style: none;
+  padding: 25px 25px 25px 25px;
+  margin-right: 25px;
+  background: #dbeaf8;
+  color: #3e3e3e;
+  font-size: 13px;
+  transition: 0.2s;
+  margin-top: 45px;
+  margin-bottom: 5px;
+  width: 70%;
+}
