@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="assignment1.css">
+  <script src="assignment1.js"></script>
+  <script type="text/javascript">
+    window.onload = createList();
+  </script>
+</head>
+
+<body>
+
+<center>
+  <div id="siteheader" class="siteheader">THINGS TO DO</div>
+
+  <br>
+
+  <div id="subheadertext" class="subheadertext">A TO-DO LIST WEBSITE FOR KNOWING WHAT TO DO</div>
+
+  <br>
+
+  <div id="navigation">
+    <a href="assignment1.html"><button id="homebutton" class="navbutton">
+    HOME
+    </button></a>
+    <a href="about.html"><button id="aboutbutton" class="navbutton">
+    ABOUT
+    </button></a>
+  </div>
+
+  <div id="sitebody" class="header">
+    <input type="text" id="textform" placeholder="Type something">
+    </input>
+
+    <button onclick="addTodo()" class="button">Add</span>
+    <button onclick="clearForm()" class="button">Clear</span>
+  </div>
+
+  <div id="tasklist" class = "tasklist">Things to do:
+    <ul id="todolist">
+    </ul>
+    <br><br>
+    <button onclick="deleteAll()" class="clearbutton">Clear All</span>
+  </div>
+
+</center>
+</body>
+
+</html>
