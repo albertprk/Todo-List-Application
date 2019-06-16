@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class InputForm extends Component {
-
   state = {
     text: ""
   }
@@ -12,9 +11,18 @@ class InputForm extends Component {
     });
   }
 
+  clearform = e => {
+    this.setState({
+      text: e.target.value
+    });
+  }
+
   addTodo = e => {
     e.preventDefault();
-    this.props.addTodo({todo: this.state.text, description: "", id: 1, show:true});
+    this.props.addTodo({todo: this.state.text, description: "", id: this.props.size + 1, show:true});
+    this.setState({
+      text: ""
+    });
   }
 
   render() {
@@ -23,11 +31,12 @@ class InputForm extends Component {
             <form id="InputForm" onSubmit={this.addTodo}>
               <input
                 type="text"
-                autocomplete="off"
+                autoComplete="off"
                 id="textform"
                 onChange={this.handleChange}
                 placeholder="Leave a message for yourself"
                 value={this.text}
+                onSubmit={this.clearform}
               />
               <button className="button">Save</button>
             <br />

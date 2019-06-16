@@ -22,6 +22,13 @@ html {
   animation: panning 140s infinite linear;
 }
 
+.bigText{
+  font-size:150%;
+}
+
+.App {
+  margin-bottom:100px;
+}
 
 .body {
   margin-top:250px;
@@ -30,10 +37,23 @@ html {
 
 .siteheader {
   font-family: arial;
-  font-size: 300%;
-  color: #323fef;
+  font-size: 150%;
+  color: #fff;
   margin-top: 135px;
+  margin-bottom: 50px;
+  margin-right:40px;
   font-weight: bold;
+  text-shadow: 3px 3px rgba(0,0,0,0.05);
+  display:inline;
+  cursor:pointer;
+  background: rgba(0,0,0,0);
+  padding: 5px;
+  border-radius:5px;
+}
+
+.siteheader:hover {
+  background: rgba(14,122,219,0.2);
+  padding: 5px;
 }
 
 .subheadertext {
@@ -46,7 +66,6 @@ html {
 .navbutton {
   padding-top: 9px;
   padding-bottom: 9px;
-  background: #323fef;
   border: 1px solid #323fef;
   color: white;
   width: 100px;
@@ -81,18 +100,84 @@ html {
   font-size: 65%;
 }
 
-input {
-  background:rgba(255,255,255,0.3);
+.about {
+  background:rgba(255,255,255,0.2);
+  color:#0563b8;
+  width:50%;
   font: arial;
-  margin: 0;
+  margin-left:10%;
   border: 0;
   width: 50%;
-  height:26px;
   padding: 7px;
   float: center;
   font-size: 16px;
+  font-weight:bold;
+  vertical-align: middle;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05);
+}
+
+.about {
+  font-family: arial;
+  position: center;
+  list-style: none;
+  padding: 35px 35px 55px 35px;
+  margin-right: 25px;
+  color: #484848;
+  font-size: 15px;
+  transition: 0.2s;
+  margin-top: 45px;
+  margin-bottom: 5px;
+  width: 70%;
+  opacity:0.85;
+}
+
+.about a {
+  text-decoration:none;
+  color: #1687d6;
+  display:inline;
+  font-size:15px;
+}
+
+p {
+  background: -webkit-linear-gradient(top, #0a7fc5, #5116d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.emptyTodo {
+  font-family: "Helvetica", arial;
+  background:rgba(255,255,255,0.2);
+  color:#0563b8;
+  width:50%;
+  font: arial;
+  border: 0;
+  width: 70%;
+  padding-top:12px;
+  padding: 10px 20px;
+  float: center;
+  font-size: 16px;
+  font-weight:bold;
+  vertical-align: middle;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05);
+  text-align:center;
+}
+
+input {
+  background:rgba(255,255,255,0.3);
+  font: arial;
+  border: 0;
+  width: 50%;
+  height:32px;
+  padding: 7px;
+  float: center;
+  font-size: 18px;
+  font-weight:bold;
   vertical-align: middle;
   margin-right: 10px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05);
+  margin-top:15px;
 }
 
 input:focus {
@@ -108,7 +193,7 @@ input:focus {
   padding: 9px;
   margin-right: 2px;
   width: 50px;
-  height:40px;
+  height:46px;
   font-size: 12px;
   float: center;
   text-align: center;
@@ -118,6 +203,7 @@ input:focus {
   border-radius: 0;
   vertical-align: middle;
   display: inline-block;
+  margin-top:15px;
 }
 
 .button:hover {
@@ -127,17 +213,22 @@ input:focus {
 
 .todoEntry {
   font-family: "Helvetica", arial;
+  font-weight:bold;
   cursor: pointer;
   position: center;
   list-style: none;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 20px 10px 20px;
   background:rgba(255,255,255,0.3);
-  color: #5a5a5a;
-  font-size: 15px;
+  color: #707070;
+  font-size: 14px;
   transition: 0.2s;
   margin-bottom: 10px;
-  width: 58%;
+  width: 70%;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05);
+}
 
+.todoEntry:hover {
+    background:rgba(255,255,255,0.5);
 }
 
 .tasklist {
@@ -169,20 +260,4 @@ input:focus {
 .clearbutton:hover {
   background: #5964f8;
   border: 1px solid #5964f8;
-}
-
-.about {
-  font-family: arial;
-  cursor: pointer;
-  position: center;
-  list-style: none;
-  padding: 25px 25px 25px 25px;
-  margin-right: 25px;
-  background: #dbeaf8;
-  color: #3e3e3e;
-  font-size: 13px;
-  transition: 0.2s;
-  margin-top: 45px;
-  margin-bottom: 5px;
-  width: 70%;
 }
