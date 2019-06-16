@@ -76,9 +76,9 @@ class App extends Component {
             <div className="siteheader" onClick={this.handleAbout}>ABOUT</div>
           </div>
           <div className="about">
-            <center><div className="bigText">Hey guest!</div></center> <br /> <br />This simple list application was
+            <center><div className="siteheader">WELCOME, GUEST</div></center> <br /> <br />This simple list application was
             developed using React.js and Redux. It takes messages from
-            you and stores them for you remember later.
+            you and stores them for you to remember later.
             <br /><br />
             Try it out by typing in a message! Add it to your list by pressing
             enter or hitting the SAVE button. You can delete a message simply by clicking
@@ -94,6 +94,7 @@ class App extends Component {
             The background was custom-made by me, in Photoshop, for this application!
             </center>
           </div>
+          <br />
         </div>
       )
     }

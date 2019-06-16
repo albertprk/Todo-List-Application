@@ -23,7 +23,19 @@ html {
 }
 
 .bigText{
-  font-size:150%;
+  font-size:175%;
+  font-family: arial;
+  color: #fff;
+  margin-top: 135px;
+  margin-bottom: 50px;
+  margin-right:40px;
+  font-weight: bold;
+  text-shadow: 3px 3px rgba(0,0,0,0.25);
+  display:inline;
+  cursor:pointer;
+  background: rgba(0,0,0,0);
+  padding: 5px;
+  border-radius:5px;
 }
 
 .App {
@@ -133,7 +145,8 @@ html {
 
 .about a {
   text-decoration:none;
-  color: #1687d6;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0,0,0,0.08);
   display:inline;
   font-size:15px;
 }
