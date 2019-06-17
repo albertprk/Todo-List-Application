@@ -1,71 +1,34 @@
 import React, { Component } from 'react'
 import './index.css'
-import InputForm from './InputForm.js'
-import Todo from './Todo.js';
-import Popup from "./Popup.js"
+import InputForm from './components/InputForm.js'
+import Todo from './components/Todo.js'
+import { connect } from 'react-redux'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers/rootReducer';
+
+const store = createStore(rootReducer);
 
 class App extends Component {
-  state = {
-    todos: [
-      {todo: "Cook dinner", description:"Burgers and fries", id: 1, show:true},
-      {todo: "Do laundry", description:"Yup", id: 2, show:true}
-    ],
-    index: true,
-    size: 2,
-    showPopUp: true,
-    description: ""
+
+  handleHome = () => {
+    this.props.switchToIndex();
   }
 
-  addTodo = todo => {
-    this.setState({
-      todos: this.state.todos.concat(todo),
-      size: this.state.size + 1
-    })
-  }
-
-  deleteTodo = (id) => {
-    const todos = this.state.todos.filter(todo => {
-      return todo.id !== id
-    })
-    this.setState({todos})
-  }
-
-  handleHover = (description) => {
-    this.setState({
-      description,
-      showPopUp: true
-    })
-  }
-
-  handleHome = e => {
-    this.setState({
-      index: true
-    })
-  }
-
-  handleAbout = e => {
-    this.setState({
-      index: false
-    })
+  handleAbout = () => {
+    this.props.switchToAbout();
   }
 
   render() {
-    if (this.state.index === true) {
+    if (this.props.index === true) {
       return (
         <div className="App">
           <div className="body">
-            <div className="siteheader">LIST</div>
+            <div className="siteheader" onClick={this.handleHome}>LIST</div>
             <div className="siteheader" onClick={this.handleAbout}>ABOUT</div>
-            <InputForm addTodo={this.addTodo} size={this.state.size} />
+            <Provider store={store}><InputForm /></Provider>
             <br /><br />
-            <Todo todos={this.state.todos}
-              deleteTodo={this.deleteTodo}
-              handleHover={this.handleHover}/>
-
-              {this.state.showPopup ?
-              <Popup text='Click "Close Button" to hide popup' />
-              : null}
-
+            <Provider store={store}><Todo /></Provider>
             </div>
           </div>
     );} else {
@@ -81,7 +44,7 @@ class App extends Component {
             you and stores them for you to remember later.
             <br /><br />
             Try it out by typing in a message! Add it to your list by pressing
-            enter or hitting the SAVE button. You can delete a message simply by clicking
+            ENTER or hitting the SAVE button. You can delete a message simply by clicking
             on it.
             <br /><br />
             Developed largely through the aid of tutorials from the Net Ninja
@@ -101,4 +64,20 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    switchToIndex: () => { dispatch({type: 'SWITCH_INDEX'})},
+    switchToAbout: () => { dispatch({type: 'SWITCH_ABOUT'})}
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos,
+    size: state.size,
+    index: state.index,
+    showPopUp: state.showPopUp
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

@@ -22,6 +22,14 @@ html {
   animation: panning 140s infinite linear;
 }
 
+body {
+  background: url(https://i.imgur.com/7rDbJ4B.png) no-repeat center center fixed;
+  background-size: cover;
+  animation: panning 140s infinite linear;
+  padding-top:0.002%;
+  padding-bottom: 10%;
+}
+
 .bigText{
   font-size:175%;
   font-family: arial;
