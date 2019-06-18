@@ -2,24 +2,21 @@
   "name": "todo-list-express-react-redux",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "react-router-dom": "^5.0.1",
+    "redux-thunk": "^2.3.0",
     "save": "^2.4.0"
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
     "nodemon": "^1.19.1"
-  },
-  "scripts": {
-   "start": "node index.js",
-  "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   }
 }
